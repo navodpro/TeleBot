@@ -54,7 +54,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@TeleBotSupport"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Mr_dutugemunu"
 
 
 @telebot.on(admin_cmd(outgoing=True, pattern="alive"))
@@ -80,14 +80,14 @@ async def amireallyalive(alive):
         tele += (
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
         )
-        tele += "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)"
+        tele += "    [✨ GitHub Repository ✨](https://github.com/navodpro/TeleBot)"
         await alive.get_chat()
         await alive.delete()
         """ For .alive command, check if the bot is running.  """
         await borg.send_file(alive.chat_id, ALV_PIC, caption=tele, link_preview=False)
         await alive.delete()
         return
-    req = requests.get("https://telegra.ph/file/0670190de8e3bddea6d95.png")
+    req = requests.get("https://telegra.ph/file/36d659ade79a09c012cbb.jpg")
     req.raise_for_status()
     file = BytesIO(req.content)
     file.seek(0)
@@ -107,7 +107,7 @@ async def amireallyalive(alive):
             f"{telemoji} **TeleBot Uptime**: `{uptime}`\n"
             f"{telemoji} **Database Status**: `All OK 👌!`\n"
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
-            "    [✨ GitHub Repository ✨](https://github.com/xditya/TeleBot)",
+            "    [✨ GitHub Repository ✨](https://github.com/navodpro/TeleBot)",
             link_preview=False,
         )
         await borg.send_file(alive.chat_id, file=sticker)
