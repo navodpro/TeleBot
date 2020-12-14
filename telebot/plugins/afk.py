@@ -97,15 +97,15 @@ async def on_afk(event):
     if USER_AFK and not (await event.get_sender()).bot:
         msg = None
         if reason is not None and tele == "True":
-            message_to_reply = "**AFK**\n{}\n\n**Last active** `{}` **ago.**\n\n**Reason** : {}".format(
+            message_to_reply = "**I'm Offline**\n{}\n\n**Last active** `{}` **ago.**\n\n**Reason** : {}".format(
                 CUSTOM_AFK, endtime, reason
             )
         elif tele == "False":
-            message_to_reply = "**AFK**\n{}\n\n**Last active** `{}` **ago.**\n\n**Reason** - {}".format(
+            message_to_reply = "**I'm Offline**\n{}\n\n**Last active** `{}` **ago.**\n\n**Reason** - {}".format(
                 CUSTOM_AFK, endtime, reason
             )
         else:
-            message_to_reply = "**AFK**\n{}\n\n**Last active** {} **ago.**".format(
+            message_to_reply = "**I'm Offline**\n{}\n\n**Last active** {} **ago.**".format(
                 CUSTOM_AFK, endtime
             )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
